@@ -1,0 +1,624 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+body {
+  background-color: black; }
+
+.menu {
+  -webkit-box-shadow: 0 0 10px 5px black;
+  box-shadow: 0 0 10px 5px black; }
+  .menu__link {
+    background-color: black;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 25px;
+    color: #ddd8e3fe;
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+    text-align: center; }
+    .menu__link_home {
+      padding: 15px 0 0 0;
+      width: 200px;
+      border: 1px solid #6d6d6e;
+      border-top: none;
+      border-radius: 0 0 10px 10px; }
+    .menu__link_home:active {
+      -webkit-box-shadow: inset 0 0 10px 1px #545354;
+      box-shadow: inset 0 0 10px 1px #545354; }
+    .menu__link_home:hover {
+      color: #777578; }
+    .menu__link__foto {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      color: #ddd8e3fe;
+      height: 30px;
+      border-radius: 10px; }
+    .menu__link__foto_png {
+      border-radius: 50%;
+      border: none;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 2; }
+    .menu__link__foto_png:active {
+      -webkit-box-shadow: 0 0 5px 1px white;
+      box-shadow: 0 0 5px 1px white; }
+    .menu__link__foto_png:hover {
+      opacity: 0.8; }
+    .menu__link__foto_text {
+      position: relative;
+      z-index: 1;
+      background-color: black;
+      display: block;
+      font-size: 10px;
+      margin: 0 0 0 -10px;
+      border: 1px solid #6d6d6e;
+      border-left: none;
+      padding: 10px 0 0 0;
+      border-radius: 0 10px 10px 0;
+      width: 100px;
+      height: 30px; }
+    .menu__link__exit {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: auto;
+      position: relative;
+      z-index: 0;
+      left: 3px;
+      top: 4px; }
+    .menu__link__exit_cross {
+      color: black;
+      font-size: 15px;
+      border: 1px solid #6d6d6e;
+      border-radius: 50%;
+      padding: 0 0 0 4px;
+      background-color: white; }
+    .menu__link__exit_cross:hover {
+      background-color: red;
+      color: white; }
+    .menu__link__exit_cross:active {
+      background-color: red;
+      color: white;
+      -webkit-box-shadow: inset 0 0 5px 1px black;
+      box-shadow: inset 0 0 5px 1px black; }
+    .menu__link__add {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: auto;
+      position: relative;
+      z-index: 0; }
+    .menu__link__add_plus {
+      color: black;
+      font-size: 15px;
+      border: 1px solid #6d6d6e;
+      border-radius: 50%;
+      padding: 1px 0 0 4px;
+      background-color: white;
+      left: 6px;
+      bottom: 6px; }
+    .menu__link__add_plus:hover {
+      background-color: #18ccb7;
+      color: white; }
+    .menu__link__add_plus:active {
+      background-color: #18ccb7;
+      color: white;
+      -webkit-box-shadow: inset 0 0 5px 1px black;
+      box-shadow: inset 0 0 5px 1px black; }
+
+@-webkit-keyframes star {
+  0% {
+    -webkit-box-shadow: 0 0 3px 1px white;
+    box-shadow: 0 0 3px 1px white; }
+  100% {
+    -webkit-box-shadow: 0 0 10px 4px white;
+    box-shadow: 0 0 10px 4px white; } }
+
+@keyframes star {
+  0% {
+    -webkit-box-shadow: 0 0 3px 1px white;
+    box-shadow: 0 0 3px 1px white; }
+  100% {
+    -webkit-box-shadow: 0 0 10px 4px white;
+    box-shadow: 0 0 10px 4px white; } }
+
+.star__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .star__content_star1 {
+    border: 2px solid white;
+    margin: 40px 0 0 100px;
+    height: 3px;
+    -webkit-animation-name: star;
+    animation-name: star;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    border-radius: 50%;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .star__content_star2 {
+    border: 2px solid white;
+    margin: 70px 0 0 400px;
+    height: 3px;
+    -webkit-animation-name: star;
+    animation-name: star;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    border-radius: 50%;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+  .star__content_star3 {
+    border: 2px solid white;
+    margin: 100px 0 0 300px;
+    height: 3px;
+    -webkit-animation-name: star;
+    animation-name: star;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    border-radius: 50%;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .star__content_star4 {
+    border: 2px solid white;
+    margin: 60px 0 0 500px;
+    height: 3px;
+    -webkit-animation-name: star;
+    animation-name: star;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    border-radius: 50%;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .star__content_star5 {
+    -webkit-animation-name: star;
+    animation-name: star;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    margin: 120px 0 0 300px;
+    border: 2px solid white;
+    color: white;
+    height: 3px;
+    border-radius: 50%;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
+
+.content__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 50px 0 0 0; }
+  .content__info_text1 {
+    padding-top: 50px;
+    font-family: Oswald;
+    color: #ddd8e3fe;
+    font-size: 18px;
+    width: 470px;
+    margin-left: 50px; }
+  .content__info_video {
+    margin: auto; }
+  .content__info_text2 {
+    padding-top: 50px;
+    font-family: Oswald;
+    color: #ddd8e3fe;
+    font-size: 18px;
+    width: 470px;
+    margin-right: 50px; }
+
+.footer {
+  margin: 158px 0 0 0;
+  height: 60px;
+  background-color: black; }
+  .footer__text {
+    padding: 20px 0 0 0;
+    margin: 0 0 0 200px;
+    font-family: 'Alumni Sans';
+    font-weight: 600;
+    color: #adacadfe; }
+
+@-webkit-keyframes cosmos {
+  0% {
+    width: 300px; }
+  100% {
+    width: 350px; } }
+
+@keyframes cosmos {
+  0% {
+    width: 300px; }
+  100% {
+    width: 350px; } }
+
+@-webkit-keyframes cosmos-alternate {
+  0% {
+    width: 350px; }
+  100% {
+    width: 300px; } }
+
+@keyframes cosmos-alternate {
+  0% {
+    width: 350px; }
+  100% {
+    width: 300px; } }
+
+.content-cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 100px 0 0 0; }
+  .content-cat__planets {
+    margin: 50px 0 0 200px; }
+    .content-cat__planets__name {
+      color: white;
+      background-color: #2b252b;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0 0 0;
+      border-radius: 10px 10px 0 0;
+      letter-spacing: 5px;
+      font-family: 'Bebas Neue';
+      font-size: 18px; }
+    .content-cat__planets__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border-radius: 0 0 10px 10px;
+      background-color: white; }
+    .content-cat__planets__info_cat-id {
+      color: #777578;
+      border: none;
+      font-family: 'Bebas Neue';
+      max-height: 150px;
+      padding: 10px; }
+    .content-cat__planets__info_foto {
+      margin: 0 50px 0 0;
+      border: none;
+      padding: 15px;
+      border-radius: 50%; }
+  .content-cat__link {
+    border: 1px solid white;
+    margin: 0 10px 50px 10px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    padding: 5px 0 0 5px;
+    border-radius: 0 0 10px 10px;
+    background-color: #2b252b;
+    border-top: none;
+    letter-spacing: 5px;
+    font-family: 'Bebas Neue'; }
+    .content-cat__link_open {
+      color: white;
+      width: 70px;
+      height: 30px;
+      font-size: 20px; }
+  .content-cat__link:hover {
+    -webkit-box-shadow: inset 0 0 10px 1px #545354;
+    box-shadow: inset 0 0 10px 1px #545354; }
+  .content-cat__category {
+    width: 300px;
+    color: #ddd8e3fe;
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin: 33px 0 0 0;
+    max-height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .content-cat__category_static {
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      text-align: right;
+      border: 1px solid black;
+      border-left: none;
+      width: 350px;
+      background-color: #ededed;
+      color: black; }
+    .content-cat__category_planets {
+      border-radius: 0 10px 10px 0;
+      margin-left: -50px;
+      height: 50px;
+      text-align: right;
+      border: 1px solid white;
+      border-left: none;
+      -webkit-transition: all 0.8s ease 0s;
+      -o-transition: all 0.8s ease 0s;
+      transition: all 0.8s ease 0s; }
+    .content-cat__category_planets:hover {
+      -webkit-transform: translate(50px, 0);
+      -ms-transform: translate(50px, 0);
+      transform: translate(50px, 0); }
+    .content-cat__category_star {
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      text-align: right;
+      border: 1px solid white;
+      border-left: none;
+      -webkit-animation-name: cosmos-alternate;
+      animation-name: cosmos-alternate;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_star:hover {
+      -webkit-animation-name: cosmos;
+      animation-name: cosmos;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_asteroids {
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      text-align: right;
+      border: 1px solid white;
+      border-left: none;
+      -webkit-animation-name: cosmos-alternate;
+      animation-name: cosmos-alternate;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_asteroids:hover {
+      -webkit-animation-name: cosmos;
+      animation-name: cosmos;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_comets {
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      text-align: right;
+      border: 1px solid white;
+      border-left: none;
+      -webkit-animation-name: cosmos-alternate;
+      animation-name: cosmos-alternate;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_comets:hover {
+      -webkit-animation-name: cosmos;
+      animation-name: cosmos;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_satellites {
+      margin: 33px 0 2px 0;
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      text-align: right;
+      border: 1px solid white;
+      border-left: none;
+      -webkit-animation-name: cosmos-alternate;
+      animation-name: cosmos-alternate;
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .content-cat__category_satellites:hover {
+      -webkit-animation-name: cosmos;
+      animation-name: cosmos;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: easy;
+      animation-timing-function: easy;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+  .content-cat__video {
+    margin-left: 200px; }
+
+
+.content-post {
+  margin: 50px 200px 0 200px; }
+  .content-post__planets__name {
+    color: white;
+    background-color: #2b252b;
+    height: 50px;
+    text-align: center;
+    padding: 15px 0 0 0;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 5px;
+    font-family: 'Bebas Neue';
+    font-size: 25px; }
+  .content-post__planets__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    background-color: white; }
+  .content-post__planets__info_cat-id {
+    color: #777578;
+    font-family: 'Bebas Neue';
+    padding: 10px;
+    font-size: 18px; }
+  .content-post__planets__info_foto {
+    margin: 15px 50px 0 15px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 10px 5px black;
+    box-shadow: 0 0 10px 5px black; }
+
+.form {
+  margin-top: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;}
+  .form__title {
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Bebas Neue';
+    padding: 7px 0 0 0;
+    letter-spacing: 5px;
+    color: white;
+    height: 35px;
+    background-color: #2b252b;
+    font-size: 25px; }
+  .form__post {
+    line-height: 35px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 2px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    color: #777578;}
+    .form__post_par{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 30px;}
+    .form__post_input{
+      margin: 5px 0 0 0;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      height: 25px;
+      border: 1px solid black;}
+    .form__post_input-content{
+      margin: 5px 0 0 0;
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;}
+    .form__post_input-boolean{
+      margin: 5px 0 0 0;
+      border-radius: 10px;
+      text-align: center;
+      width: 25px;
+      height: 25px;
+      margin-right: 88px;}
+    .form__post_input-photo{
+      margin: 5px 0 0 0;
+      text-align: center;
+      width: 200px;
+      height: 25px;}
+    .form__post_input:focus{
+      border: 0px solid black;
+      box-shadow: 0 0 10px 1px black;}
+    .form__post_input-content:focus{
+      border: 0px solid black;
+      box-shadow: 0 0 10px 1px black;}
+    .form__post_input-boolean:hover{
+      border: 0px solid black;
+      box-shadow: 0 0 10px 1px black;}
+    .form__post_label{
+      margin: 0 0 0 5px;
+      color: black;}
+    .form__post_error{
+      color: red;}
+    .form__post_submit {
+      border: 1px solid white;
+      background-color: #2b252b;
+      border-radius: 10px;
+      margin: 15px 0 0 0;
+      width: 80px;
+      color: white;
+      height: 35px; }
+    .form__post_submit:hover{
+      box-shadow: 0 0 10px 1px black;}

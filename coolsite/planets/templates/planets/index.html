@@ -1,0 +1,12 @@
+{% extends 'planets/base.html' %}
+{% load static %}
+
+{% block content%}
+    <div class="content">
+        <ul class="content__info">
+            <li>
+                <video id="video" width="70%" height="100%" muted="muted" autoplay="autoplay" loop="loop" class="content__info content__info_video" src="{% static 'planets/videos/World.mp4' %}"></video>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

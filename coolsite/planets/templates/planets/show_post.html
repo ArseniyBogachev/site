@@ -1,0 +1,15 @@
+{% extends 'planets/base.html' %}
+
+{% block content %}
+    {% for p in post %}
+    <div class="content-post">
+        <div class="content-post__planets">
+            <div class="content-post__planets__name">{{ p.title }}</div>
+            <div class="content-post__planets__info">
+                <img class="content-post__planets__info content-post__planets__info_foto" src="{{ p.photo.url }}" alt="Sorry" width="200px" height="200px" />
+                <div class="content-post__planets__info content-post__planets__info_cat-id">{{ p.content }}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

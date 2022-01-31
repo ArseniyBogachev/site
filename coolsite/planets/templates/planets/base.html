@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="UTF-8"/>
+    <link rel="shortcut icon" href="{% static 'planets/images/favicon.ico' %}" type="image/x-icon">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'planets/css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="menu">
+        <ul class="menu__link">
+            {% for m in menu%}
+            <li>
+                <a href="{% url m.url_name %}" class="menu__link menu__link_home">{{ m.title }}</a>
+            </li>
+            {% endfor %}
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'logout' %}" class="menu__link__exit"><span class="menu__link__exit menu__link__exit_cross">×</span></a>
+            <a href="{% url 'user' %}" class="menu__link__foto"><img class="menu__link__foto menu__link__foto_png" src="{% static 'planets/images/user.png' %}" alt="Sorry"/><span class="menu__link__foto menu__link__foto_text">{{ user.username }}</span></a>
+            <a href="{% url 'add_page' %}" class="menu__link__add"><span class="menu__link__add menu__link__add_plus">+</span></a>
+            {% else %}
+            </li>
+            <li>
+                <a href="{% url 'register' %}" class="menu__link menu__link_home">Register</a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}" class="menu__link menu__link_home">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+<!--    <footer class="footer">-->
+<!--        <div class="footer__text">-->
+<!--           © 2021 Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, строго запрещено. Все тексты и изображения являются собственностью сайта.-->
+<!--       </div>-->
+<!--    </footer>-->
+    <script src="{% static 'planets/js/Start.js'%}"></script>
+</body>
+</html>

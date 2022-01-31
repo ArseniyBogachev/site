@@ -1,0 +1,17 @@
+{% extends 'planets/base.html' %}
+{% load static %}
+
+{% block content%}
+    <div class="content-cat">
+        <ul class="content-cat__category">
+            {% for c in cats %}
+            <li>
+                <a class="content-cat__category content-cat__category_planets" href="{{ c.get_absolute_url }}">{{c.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="content-cat__video">
+            <video id="video" width="80%" height="100%" muted="muted" autoplay="autoplay" loop="loop" class="content__video content__video_video" src="{% static 'planets/videos/World.mp4' %}"></video>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'planets/base.html' %}
+
+
+{% block content%}
+<div class="form">
+    <h1 class="form__title">{{title}}</h1>
+    <form class="form__post" method="post">
+        {% csrf_token %}
+        {% for f in form %}
+        <p class="form__post form__post_par"><label class="form__post form__post_label" for="{{ f.id_for_label }}">{{f.label}}:</label>{{f}}</p>
+        <div class="form__post form__post_error">{{f.error}}</div>
+        {% endfor %}
+        <button class="form__post form__post_submit" type="submit">Register</button>
+    </form>
+</div>
+{% endblock %}

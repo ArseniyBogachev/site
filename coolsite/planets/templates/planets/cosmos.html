@@ -1,0 +1,32 @@
+{% extends 'planets/category.html' %}
+
+{% block content%}
+    <div class="content-cat">
+        <ul class="content-cat__category">
+            {% for c in cats %}
+            {% if c.slug == selected %}
+            <li>
+                <div class="content-cat__category content-cat__category_static">{{ c.name }}</div>
+            </li>
+            {% else %}
+            <li>
+                <a class="content-cat__category content-cat__category_planets" href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+        <div class="content-cat__planets">
+            {% for p in posts %}
+            <div class="content-cat__planets__name">{{ p }}</div>
+            <div class="content-cat__planets__info">
+                <img class="content-cat__planets__info content-cat__planets__info_foto" src="{{ p.photo.url }}" alt="Sorry" width="200px" height="200px" />
+                <div id="cat-id" class="content-cat__planets__info content-cat__planets__info_cat-id">{{ p.content|truncatewords:280 }}</div>
+            </div>
+        <div class="content-cat__link">
+            <a class="content-cat__link_open" href="{{ p.get_absolute_url }}">Open</a>
+        </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
